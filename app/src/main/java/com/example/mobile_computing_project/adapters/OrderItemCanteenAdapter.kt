@@ -7,20 +7,22 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobile_computing_project.R
-import com.example.mobile_computing_project.models.OrderItemCanteen
+import com.example.mobile_computing_project.models.OrderItem
 
-class OrderItemCanteenAdapter (private val context: Context, private val orderItems: List<OrderItemCanteen>):
+class OrderItemCanteenAdapter (private val context: Context, private val orderItems: List<OrderItem>):
     RecyclerView.Adapter<OrderItemCanteenAdapter.ViewHolder>() {
     private lateinit var tvName: TextView
     private lateinit var tvAmount: TextView
     private lateinit var tvItems: TextView
     private lateinit var tvStatus: TextView
+    private lateinit var tvCreatedAt: TextView
 
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-        fun bind(orderItem: OrderItemCanteen){
+        fun bind(orderItem: OrderItem){
             tvName.text = orderItem.user?.name
             tvAmount.text = orderItem.amount.toString()
             tvStatus.text = orderItem.status
+            tvCreatedAt.text = orderItem.createdAt.toString()
         }
     }
 
@@ -30,6 +32,7 @@ class OrderItemCanteenAdapter (private val context: Context, private val orderIt
         tvAmount = view.findViewById(R.id.tv_amount)
         tvStatus = view.findViewById(R.id.tv_status)
         tvItems = view.findViewById(R.id.tv_items)
+        tvCreatedAt = view.findViewById(R.id.tv_createdAt)
         return ViewHolder(view)
     }
 
