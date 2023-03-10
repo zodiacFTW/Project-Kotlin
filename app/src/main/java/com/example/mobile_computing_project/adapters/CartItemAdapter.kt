@@ -12,7 +12,7 @@ import com.example.mobile_computing_project.R
 import com.example.mobile_computing_project.models.CartItem
 import com.example.mobile_computing_project.models.OrderItem
 
-class CartItemAdapter (private val context: Context, private val cartItems: List<CartItem>):
+class CartItemAdapter (private val cartItems: List<CartItem>):
     RecyclerView.Adapter<CartItemAdapter.ViewHolder>() {
     private lateinit var tvName: TextView
     private lateinit var tvPrice: TextView
@@ -32,7 +32,7 @@ class CartItemAdapter (private val context: Context, private val cartItems: List
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.cart_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.cart_item, parent, false)
         tvName = view.findViewById(R.id.tv_name)
         tvPrice = view.findViewById(R.id.tv_price)
         ivVeg = view.findViewById(R.id.iv_nonveg_symbol)
