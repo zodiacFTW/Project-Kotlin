@@ -8,17 +8,18 @@
     android:layout_marginVertical="15dp">
 
     <ImageView
-        android:id="@+id/iv_nonveg_symbol"
+        android:id="@+id/iv_veg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/non_veg_symbol"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="10dp" />
+        android:layout_marginTop="10dp"
+        android:contentDescription="Veg Symbol" />
 
     <TextView
         android:id="@+id/tv_name"
         android:layout_width="wrap_content"
-        android:layout_toEndOf="@+id/iv_nonveg_symbol"
+        android:layout_toEndOf="@+id/iv_veg"
         android:text="Chicken Tikka"
         android:fontFamily="@font/semi_bold"
         android:textColor="@color/black"
@@ -30,7 +31,7 @@
     <TextView
         android:id="@+id/tv_price"
         android:layout_width="wrap_content"
-        android:layout_toEndOf="@+id/iv_nonveg_symbol"
+        android:layout_toEndOf="@+id/iv_veg"
         android:text="$10"
         android:layout_below="@+id/tv_name"
         android:textColor="@color/grey"
@@ -60,8 +61,8 @@
         android:text="Remove"
         android:fontFamily="@font/semi_bold"
         android:textAllCaps="false"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="15dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="15dp"
         android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         app:cornerRadius="10sp"
@@ -73,11 +74,10 @@
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:layout_marginRight="15dp"
-        android:layout_alignParentRight="true"
+        android:layout_marginEnd="15dp"
+        android:layout_alignParentEnd="true"
         android:background="@drawable/border_tv"
         android:backgroundTint="@color/theme"
-        android:outlineAmbientShadowColor="@android:color/holo_blue_bright"
         android:visibility="visible">
 
         <TextView
